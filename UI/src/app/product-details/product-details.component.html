@@ -1,0 +1,41 @@
+<section class="container-fluid bg-light p-5">
+    <h3>Products</h3>
+
+    <div class="card" *ngIf="product===null">
+        <p class="card-text">No Product Found</p>
+    </div>
+
+    <table class="table w-50 table-bordered" *ngIf="product!=null">
+        <tr>
+            <th>Product</th>
+            <td>{{product.productId}}</td>
+        </tr>
+        <tr>
+            <th>Product Name</th>
+            <td>{{product.productName}}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{product.price}}</td>
+        </tr>
+        <tr>
+            <th>Vendor Id</th>
+            <td>{{product.vid}}</td>
+        </tr>
+        <tr>
+            <th>Vendor Name</th>
+            <td>{{product.vendor.name}}</td>
+        </tr>
+        <tr>
+            <th>Vendor City</th>
+            <td>{{product.vendor.city}}</td>
+        </tr>
+        <tr>
+            <th>Vendor Email Id</th>
+            <td>{{product.vendor.emailId}}</td>
+        </tr>
+    </table>
+    <button (click)="list()" class="btn btn-primary">Back to Products List</button><br>
+</section>
+
+

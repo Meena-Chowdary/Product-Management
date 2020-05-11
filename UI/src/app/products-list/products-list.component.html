@@ -1,0 +1,26 @@
+<section class="container-fluid bg-light p-5">
+    <h3>Products List</h3>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+            <th>Products</th>
+            <th>Product Name</th>
+            <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of products">
+                <td>{{c.productId}}</td>
+                <td>{{c.productName}}</td>
+                <td>
+                <button (click)="updateProduct(c.productId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="productDetails(c.productId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="delete(c.productId)" class="btn btn-warning" style="margin-left: 10px">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <a class="btn btn-success btn-sm mr-2" href="add">Add product</a>
+        </tfoot>
+    </table>
+</section>

@@ -1,0 +1,27 @@
+<h3>Update Product</h3>
+<body>
+<div >
+    <form (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="Name" required [(ngModel)]="product.productName" name="name">
+        </div>
+    
+        <div class="form-group">
+          <label for="name">Price</label>
+          <input type="text" class="form-control" id="address" required [(ngModel)]="product.price" name="address">
+        </div>
+        <div class="form-group">
+            <label for="name">Description</label>
+            <input type="text" class="form-control" id="MobileNo" required [(ngModel)]="product.productDescription" name="mobileNo">
+          </div>
+  
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+  <br>
+<div>
+  <button (click)="gotoList()" class="btn btn-primary">Back to Products List</button><br>
+</div>
+  </body>

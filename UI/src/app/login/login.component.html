@@ -1,0 +1,22 @@
+
+<body>
+  <form (ngSubmit)="handleLogin()">
+      <div id="profile" class="container-fluid login-form">
+          <h2 class="text-center">Log In</h2>
+          <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+          <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+          <div class="form-group">
+              <input type="text" class="form-control" id="userName" name="username" placeholder="Username"
+                  [(ngModel)]="username" #userName required="required">
+          </div>
+          <div class="form-group">
+              <input type="password" class="form-control" name="password" placeholder="Password"
+                  [(ngModel)]="password" required="required">
+          </div>
+          <div class="form-group">
+              <button (click)="ngSubmit">Log In</button>
+          </div>
+          </div>
+          </form>
+          </body>
+
