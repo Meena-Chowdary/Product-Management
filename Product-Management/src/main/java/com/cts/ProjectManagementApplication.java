@@ -4,14 +4,14 @@ import java.util.Collections;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.client.RestTemplateBuilder;
+
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
-//import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.client.RestTemplate;
+
 
 import springfox.documentation.service.Contact;
 import springfox.documentation.builders.PathSelectors;
@@ -30,11 +30,6 @@ public class ProjectManagementApplication {
 		SpringApplication.run(ProjectManagementApplication.class, args);
 	}
 	
-//	 @Bean
-//	   public RestTemplate restTemplate(RestTemplateBuilder builder) {
-//	      return builder.build();
-//	   }
-	
 	@Bean
 	Docket configureSwagger() {
 		return new Docket(DocumentationType.SWAGGER_2)
@@ -46,9 +41,9 @@ public class ProjectManagementApplication {
 						"A Sample API for Products",
 						"1.0.0",
 						"Shopping is Fun",
-						new Contact("Mahesh", "www.mahesh.com", "mahesh@gmail.com"), 
+						new Contact("Meena", "www.meena.com", "meena@gmail.com"), 
 						"Standard API License",
-						"www.maheshuma.com",
+						"www.meena.com",
 						Collections.emptyList()));
 }
 

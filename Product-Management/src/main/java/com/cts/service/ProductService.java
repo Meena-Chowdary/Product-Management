@@ -1,4 +1,5 @@
 package com.cts.service;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class ProductService {
 
 	public Product getProductById(int productId) {
 		Product p=repo.findById(productId).orElse(null);
-		Product p1=p.setVendor(proxy.getVendorById(p.getVid()));
+		p.setVendor(proxy.getVendorById(p.getVid()));
 		return p;
 	}
 
@@ -48,8 +49,7 @@ public class ProductService {
 			p.setVendor(proxy.getVendorById(p.getVid()));
 		}
 		return products;
-	}
 
-	
+	}
 
 }

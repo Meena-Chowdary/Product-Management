@@ -13,11 +13,11 @@ import javax.validation.constraints.Size;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-//import lombok.Data;
+
 
 @ApiModel(description = "This is the product model")
 @Entity(name="products")
-//@Data
+
 public class Product {
 	
 	@ApiModelProperty(value = "A unique key for each product")
@@ -45,6 +45,9 @@ public class Product {
 	
 	@Transient
 	private Vendor vendor;
+	
+	
+	
 	public Product() {
 	
 	}
@@ -67,7 +70,7 @@ public class Product {
 		this.productDescription = productDescription;
 		this.price = price;
 		this.vid = vid;
-		this.vendor = vendor;
+		this.vendor =  vendor;
 	}
 
 	public int getProductId() {
@@ -109,17 +112,22 @@ public class Product {
 	public void setVid(int vid) {
 		this.vid = vid;
 	}
-
 	public Vendor getVendor() {
 		return vendor;
 	}
-
-	public Product setVendor(Vendor vendor) {
+	public void setVendor(Vendor vendor) {
 		this.vendor = vendor;
-		return null;
 	}
 
-
+//	public Vendor getVendor() {
+//		return vendor;
+//	}
+//
+//
+//	public Product setVendor(Vendor vendor) {
+//		this.vendor = vendor;
+//		return null;
+//	}
 	
 	
 }
