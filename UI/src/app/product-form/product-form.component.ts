@@ -58,7 +58,7 @@ export class ProductFormComponent implements OnInit {
     }
     ob.subscribe(
       (Data) =>{
-        this.router.navigateByUrl("");
+        this.router.navigateByUrl("list");
       },
       (errResponse)=> {
         this.msg=errResponse.error;

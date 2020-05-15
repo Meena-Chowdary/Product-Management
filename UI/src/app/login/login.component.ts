@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,7 +18,6 @@ export class LoginComponent implements OnInit {
   loginSuccess = false;
 
   constructor(
-    private route: ActivatedRoute,
     private router: Router,
     private authenticationService: AuthService
   ) { }
@@ -33,7 +33,9 @@ export class LoginComponent implements OnInit {
     }, () => {
       this.invalidLogin = true;
       this.loginSuccess = false;
-    });      
+    });  
+   
+    
   }
 
 

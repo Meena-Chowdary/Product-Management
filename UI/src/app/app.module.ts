@@ -8,11 +8,12 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
-import {HttpErrorInterceptor} from './http-error.interceptor'
+//import {HttpErrorInterceptor} from './http-error.interceptor'
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HttpInterceptorService } from './services/http-interceptor-service.service';
 import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,11 +32,11 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HttpErrorInterceptor,
-      multi:true
-    },
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: HttpErrorInterceptor,
+    //   multi:true
+    // },
     {
       
         provide:HTTP_INTERCEPTORS,

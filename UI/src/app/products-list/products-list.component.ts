@@ -37,6 +37,9 @@ export class ProductsListComponent implements OnInit {
   }
 
 }
+  save(){
+    this.router.navigate(['add']);
+  }
 
   productDetails(productId: number){
     this.router.navigate(['details',productId ]);

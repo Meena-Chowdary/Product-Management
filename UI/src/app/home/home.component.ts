@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { DataSharingService } from '../services/data-sharing.service';
 
 @Component({
   selector: 'app-home',
