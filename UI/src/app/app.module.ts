@@ -13,7 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HttpInterceptorService } from './services/http-interceptor-service.service';
 import { HomeComponent } from './home/home.component';
-
+import { DataSharingService } from './services/data-sharing.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [
+  providers: [DataSharingService,
     // {
     //   provide: HTTP_INTERCEPTORS,
     //   useClass: HttpErrorInterceptor,

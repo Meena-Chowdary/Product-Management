@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
-
+import { DataSharingService } from '../services/data-sharing.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   invalidLogin = false;
   loginSuccess = false;
 
-  constructor(
+  constructor(private dataSharingService: DataSharingService,
     private router: Router,
     private authenticationService: AuthService
   ) { }
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.invalidLogin = true;
       this.loginSuccess = false;
     });  
-   
+    this.dataSharingService.isUserLoggedIn.next(true);
     
   }
 

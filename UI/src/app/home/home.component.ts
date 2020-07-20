@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-
+import { DataSharingService } from '../services/data-sharing.service';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +11,12 @@ export class HomeComponent implements OnInit {
 
   isLoggedIn = false;
 
-  constructor(private route: ActivatedRoute,
-    private router: Router,
-    private authenticationService: AuthService) { }
+  constructor(private dataSharingService: DataSharingService,
+    private authenticationService: AuthService) {
+      this.dataSharingService.isUserLoggedIn.subscribe( value => {
+        this.isLoggedIn = value;
+    });
+     }
 
   ngOnInit() {
     this.isLoggedIn = this.authenticationService.isUserLoggedIn();
@@ -23,5 +26,5 @@ export class HomeComponent implements OnInit {
   handleLogout() {
     this.authenticationService.logout();
   }
-
+  
 }
